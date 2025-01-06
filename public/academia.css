@@ -1,0 +1,108 @@
+body {
+    background-image: url("../public/images/girl.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+ }
+ header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size: 20px;
+    font-family: Arial;
+ }
+ header span {
+    padding-right: 20px;
+ }
+ .sub-title {
+    font-size: 13px;
+ }
+ .title {
+    font-size: 35px;
+    font-weight: bold;
+ }
+ nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(227, 193, 193, 0.254);
+    color:white;
+    font-size: 20px;
+    font-family: Arial;
+ }
+ main {
+    color:white;
+    font-family: Arial;
+    width: 600px;
+    padding-left: 100px;
+    padding-top: 100px;
+ }
+ .main-title {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+ }
+ .main-subtitle {
+    font-size: 20px;
+    padding-bottom: 10px;
+ }
+ .main-text {
+    font-size: 16px;
+    width: 500px;
+    padding-top: 20px;
+ }
+ 
+ .section {
+    background-color: white;
+    height: 900px;
+    margin: -5px;
+ }
+ .section-1 {
+   display: grid; 
+    grid-template-columns: 4fr 8fr;
+    background-color: white;
+    height: 700px;
+    margin: -5px;
+ }
+
+ .sec1-title{
+   margin-top: 50px;
+   margin-left: 200px;
+   font-size: 15px;
+   color: blue;
+ }
+ .sec1-subtitle{
+   margin-top: 10px;
+   margin-left: 200px;
+   font-size: 25px;
+   color: black;
+  
+ }
+ 
+ .card-header{
+   margin-top: 15px;
+   margin-left: 200px;
+   font-size: 25px;
+   color: black;
+   font-weight: bold;  
+ }
+ .card-body{
+   margin-left: 200px;
+   color: gray;
+   font-size: 20px;
+   margin-top: 20px;
+
+ }
+ .card{
+   display: block;
+   border: 1px solid black;
+   margin: 10px;
+   height: 140px;
+   margin-left: 150px;
+ }
+ .card:hover{
+   background-color: green;
+ }
+ 
+ 
+ 

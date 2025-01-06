@@ -1,0 +1,20 @@
+ <script>
+  var word = prompt("Enter the word: ");
+  var reverse = "";
+
+  for(var i= word.length-1; i>=0;i--)
+  {
+    reverse = reverse+word[i];
+  }
+  if(reverse==word)
+  {
+    document.write(`${word} is palindrome`);
+  }
+  else{
+    document.write(`${word} is not palindrome`);
+  }
+  document.write(`<br> ${reverse}`);
+ 
+</script>
+
+

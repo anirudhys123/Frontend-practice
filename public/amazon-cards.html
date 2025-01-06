@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon cards</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr ;
+            grid-gap: 10px;
+            margin-top: -300px;
+            padding: 10px;
+        }
+        .card {
+            height: 420px;
+            background-color: white;
+            padding: 5px;
+            box-shadow: 1px 1px 1px black;
+            
+        }
+        .card-header{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        .card-img{
+            width: 90%;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 5px;
+            padding-top: 5px;
+        }
+        .footer{
+            color: gray;
+            padding-top: 15px;
+            margin-left: 130px;
+            
+        }
+        .card-footer{
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+     <img src = "images/amazon-bg.jpg" width = "100%">
+    </header>
+    <section>
+        <div class = "card">
+         <div class = "card-header">
+            <span>Revamp your home in style</span>
+         </div>
+         <div class = "card-body">
+            <div class = "row">
+                <div>
+                    <img src = "images/a1.jpg" class = "card-img">
+                    <p>Cushion covers, bedsheets &more</p>
+                </div>
+                <div>
+                    <img src = "images/a2.jpg" class = "card-img">
+                    <p>Figurines, vases and more</p>
+                </div>
+            </div>
+            <div class = "row">
+                <div>
+                    <img src = "images/a3.jpg" class = "card-img">
+                    <p>Home Storage</p>
+                </div>
+                <div>
+                    <img src = "images/a4.jpg" class = "card-img">
+                    <p>Lighting Solutions</p>
+                </div>
+            </div>
+
+         </div>
+         <div class "card-footer">
+         <span class = "footer"> Explore all</span>
+         </div>
+        </div>
+        <div class = "card">
+
+        </div>
+        <div class = "card">
+
+        </div>
+
+    </section>
+    
+</body>
+</html>

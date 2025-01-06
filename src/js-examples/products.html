@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyload() {
+            fetch("../../Data/mobiles.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(mobiles) {
+                mobiles.forEach(function(mobile) {
+                    var div = document.createElement("div");
+                    div.className = "row my-4 border border-1 m-4 p-2";
+                    div.innerHTML = `
+                        <div class="col-2">
+                            <img src="${mobile.image}" width="100%">
+                        </div>
+                        <div class="col-8">
+                            <div class="h4"><b>${mobile.title}</b></div>
+                            <div class="my-2">
+                                <span class="badge bg-success p-1 rounded"> ${mobile.rating.rate} <span class="bi bi-star-fill"></span> </span> 
+                                <span class="ms-3 text-secondary fw-bold fs-5"> ${mobile.rating.ratings.toLocaleString()} ratings & ${mobile.rating.reviews.toLocaleString()} reviews </span>
+                            </div>
+                            <div>
+                                <ul class="list-unstyled">
+                                    ${mobile.offers.map(offer => `<li class="bi bi-tag-fill text-success my-2 mx-2 fs-5">${offer}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="h2"><b>&#8377; ${mobile.price.toLocaleString()}</b></div>
+                        </div>
+                    `;
+                    document.querySelector("section").appendChild(div);
+                });
+            })
+            .catch(function(error) {
+                console.error("Error fetching mobile data:", error);
+            });
+        }
+    </script>
+</head>
+<body onload="bodyload()" class="container-fluid">
+    <section></section>
+</body>
+</html>

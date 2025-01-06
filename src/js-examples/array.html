@@ -1,0 +1,42 @@
+<script>
+//     var values = Array(10, 20, 30, 50);
+//     var categories = new Array(1,2,3,4,5);
+//    document.write(values + "<br>");
+//    document.write(categories);
+
+
+// var items = [[1,2,3],["Hyd","Delhi",["Tv","watch"]]];
+// document.write(items[1][2][0]);
+
+
+// var items = [[1,2,3],["Hyd","Delhi",["Tv","watch"]],function(){document.write("Function inside array")}];
+// document.write(items[0][0] + "<br>");
+// items[2]();
+
+
+// var categories = ["TV", "mobile","shoes"];
+// document.write(categories.toString() + "<br>");
+// document.write(categories.join(">"));
+
+
+// var categories = ["TV", "mobile","shoes"];
+// categories.map(function(value){
+//     document.write(`<p> ${value} </p>`);
+// });
+
+// var categories = ["TV", "mobile","shoes"];
+// categories.forEach(function(value,index){
+//     document.write(`<p>[${index}] ${value} </p>`);
+// });
+
+var values = [10000,20000,30000,40000,50000];
+values.filter(function(value)
+{
+    return value>=20000 && value<=50000;   
+}
+).map(function(value){
+    document.write(`<p> ${value} </p>`);
+}
+)
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operators</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+    <script>
+        function SubmitClick(){
+            var CourseName="";
+            var Courses = document.getElementsByName("Course");
+            for (var course of Courses)
+        {
+            if(course.checked){
+                CourseName += course.value + "<br>";
+            }
+        }
+          document.querySelector("p").innerHTML = `Selected Courses: <br> ${CourseName}`;
+        }
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li> <input type = "checkbox" name = "Course" value="UI Full Stack"><label>UI Full Stack</label> </li>
+        <li> <input type = "checkbox" name = "Course" value="JAVA"><label>JAVA</label> </li>
+        <li> <input type = "checkbox" name = "Course" value="Python"><label>Python</label> </li>
+    </ul>
+    <button onclick="SubmitClick()"> Submit</button>
+    <p></p>
+    
+</body>
+</html>

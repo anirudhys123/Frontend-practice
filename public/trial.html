@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nested Dropdown</title>
+<style>
+  /* Style to position the nested dropdown */
+  #sub {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+</style>
+</head>
+<body>
+
+<form>
+  <select id="main">
+    <option value="">Select</option>
+    <optgroup label="Fruits">
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="orange">Orange</option>
+    </optgroup>
+    <optgroup label="Vegetables">
+      <option value="carrot">Carrot</option>
+      <option value="potato">Potato</option>
+      <option value="tomato">Tomato</option>
+    </optgroup>
+  </select>
+  
+  <select id="sub" disabled>
+    <option>Select a main item first</option>
+  </select>
+</form>
+
+<script>
+  document.getElementById('main').addEventListener('change', function() {
+    var subDropdown = document.getElementById('sub');
+    subDropdown.innerHTML = ''; // Clear existing options
+    var selectedOptGroup = this.options[this.selectedIndex].parentNode;
+    var options = selectedOptGroup.getElementsByTagName('option');
+    for (var i = 0; i < options.length; i++) {
+      var option = options[i].cloneNode(true);
+      subDropdown.appendChild(option);
+    }
+    subDropdown.disabled = false;
+    
+    // Position the nested dropdown to the right of the main dropdown
+    var mainDropdownRect = this.getBoundingClientRect();
+    subDropdown.style.top = mainDropdownRect.top + 'px';
+    subDropdown.style.left = mainDropdownRect.right + 'px';
+  });
+</script>
+
+</body>
+</html>

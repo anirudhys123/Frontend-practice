@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Map</title>
+    <script>
+        var menu = [
+            {Category: "Electronics", Products: ["TV", "Mobile", "Watch"] },
+            {Category: "Fashion", Products: ["Kids", "Men", "Women"]}
+        ];
+
+        function bodyload() {
+            menu.map(function(item) {
+                var ol_li = document.createElement("li");
+                ol_li.innerHTML = item.Category;
+
+                var ul = document.createElement("ul");
+
+                item.Products.map(function(product) {
+                    var ul_li = document.createElement("li");
+                    ul_li.innerHTML = product;
+                    ul.appendChild(ul_li);
+                });
+
+                ol_li.appendChild(ul);
+                document.querySelector("ol").appendChild(ol_li);
+            });
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <ol>
+    </ol>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2 </title>
+    <script>
+        function bodyload(){
+
+        var topics = [
+          {title: 'HTML',description: "It is used for MarkUp"},
+          {title: 'CSS', description: "Used for styles"}
+        ];
+
+        topics.map(function(topic){
+            var dt = document.createElement("dt");
+            dt.innerHTML = topic.title;
+            var dd = document.createElement("dd");
+            dd.innerHTML = topic.description;
+
+        document.querySelector("dl").appendChild(dt);
+        document.querySelector("dl").appendChild(dd);
+            
+        })
+        
+    }
+
+    </script>
+</head>
+<body onload="bodyload()">
+    <dl>
+        <dt>
+            
+        </dt>
+    </dl>
+
+    
+</body>
+</html>

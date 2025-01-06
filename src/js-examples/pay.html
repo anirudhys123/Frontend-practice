@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Payment</legend>
+        <dl>
+            <dt>Card number</dt>
+            <dd><input type="text" id="card" onblur="VerifyCard()" maxlength="16"></dd>
+            <div id = "cvvContainer" style="display: none;">
+            <dt>Enter CVV</dt>
+            <dd><input type="text" id="CVV" size="4" onblur="VerifyCVV()" disabled></dd>
+            </div>
+            <div id = "expiryContainer" style="display: none;">
+            <dt>Expiry</dt>
+            <dd>
+                <select id="expiry" disabled onchange="VerifyExpiry()">
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                </select>
+            </dd>
+        </div>
+        </dl>
+        <button id="btnPay" disabled>Pay</button>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" name="gender" value="Male" id="optMale"> <label> Male </label>
+        <input type="radio" name="gender" value="Female" id="optFemale"> <label> Female</label>
+        <br><br>
+        <button onclick="SubmitClick()">Submit</button>
+        <p></p>
+    </fieldset>
+
+    <script src="./pay.js"></script>
+</body>
+</html>

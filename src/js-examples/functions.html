@@ -1,0 +1,37 @@
+<!-- <script>
+    function numbers(count){
+        for(var i = 1; i <= count; i++) {
+            document.write(i + "<br>");
+        }
+    }
+    numbers(5);
+    numbers(10);
+</script> -->
+
+<!-- <script>
+    function list(collection){
+        for(var item of collection){
+            document.write(item + "<br>");
+        }
+    }
+    list(["all","electronics","fashion"]);
+    list([10,20,30]);
+
+</script> -->
+
+<!-- 
+<script>
+    function product(...details){
+        var[id,price,title] = details;
+        document.write(`<h2> ${id} <br> ${price} <br> ${title} </h2>`)
+    }
+    product(1,15000,"TV");
+</script> -->
+
+<script>
+    function product(title, ...details){
+        var[id,price,rating] = details;
+        document.write(`<h2> ${id} <br> ${title} <br> ${price} <br> ${rating}</h2>`);
+    }
+    product("Samsung",10,25000,4.8)
+</script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </head>
+  <body class="container-fluid" onload="bodyload()">
+    <header
+      class="d-flex justify-content-between p-2 mt-2 bg-light border border-1"
+    >
+      <div>
+        <button
+          class="bi bi-justify btn btn-light"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menu"
+        >
+          <span class="fs-5 fw-bold"> My Store</span>
+        </button>
+      </div>
+
+      <div class="fs-4 fw-bold">
+        <span class="mx-3"
+          ><a
+            class="text-decoration-none link-dark"
+            href="javascript:LoadProducts('https://fakestoreapi.com/products')"
+            >Home
+          </a></span
+        >
+        <span class="mx-3"
+          ><a
+            class="text-decoration-none link-dark"
+            href="javascript:LoadProducts('https://fakestoreapi.com/products/category/electronics')"
+            >Electronics</a
+          >
+        </span>
+        <span class="mx-3"
+          ><a
+            class="text-decoration-none link-dark"
+            href="javascript:LoadProducts('https://fakestoreapi.com/products/category/Jewelery')"
+            >Jewelery</a
+          >
+        </span>
+        <span class="mx-3"
+          ><a
+            class="text-decoration-none link-dark"
+            href="javascript:LoadProducts('https://fakestoreapi.com/products/category/')"
+            >Men's Clothing</a
+          ></span
+        >
+        <span class="mx-3"
+          ><a
+            class="text-decoration-none link-dark"
+            href="javascript:LoadProducts('https://fakestoreapi.com/products/category/')"
+            >Women's Clothing</a
+          >
+        </span>
+      </div>
+
+      <button
+        onclick="LoadCart()"
+        data-bs-target="#cart"
+        data-bs-toggle="offcanvas"
+        class="btn me-4 btn-warning bi bi-cart4 position-relative"
+      >
+        <span
+          id="lblCount"
+          class="badge position-absolute bg-danger rounded rounded-circle"
+        ></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" id="cart">
+        <div class="offcanvas-header">
+          <h2>Your Cart Items</h2>
+          <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Photo</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </header>
+    <section class="mt-4">
+      <nav class="offcanvas offcanvas-start" id="menu">
+        <div class="offcanvas-header">
+          <h2>My Store</h2>
+          <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <label class="form-label fw-bold"> Select Category </label>
+          <div>
+            <select
+              onchange="CategoryChanged()"
+              class="form-select"
+              id="lstCategories"
+            ></select>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <main class="d-flex flex-wrap overflow-auto" style="height: 500px"></main>
+
+    <script src="./store.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        marquee img {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <marquee id="imageMarquee" scrollamount="20" direction="left" behavior="alternate">
+            <img src="../public/images/a1.jpg" width="100" height="100">
+            <img src="../public/images/a2.jpg" width="100" height="100">
+            <img src="../public/images/a3.jpg" width="100" height="100">
+            <img src="../public/images/a4.jpg" width="100" height="100">
+            <img src="../public/images/a5.jpg" width="100" height="100">
+        </marquee>
+    </div>
+
+    <script>
+        const marquee = document.getElementById('imageMarquee');
+        const images = marquee.getElementsByTagName('img');
+
+        for (let img of images) {
+            img.addEventListener('mouseover', () => {
+                marquee.stop();
+            });
+
+            img.addEventListener('mouseout', () => {
+                marquee.start();
+            });
+        }
+    </script>
+</body>
+</html>

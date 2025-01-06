@@ -1,0 +1,12 @@
+{
+    "title": "Apple iPhone 15 (Black, 128 GB)",
+     "price": 74999,
+     "rating": {"rate":4.6, "ratings":39755, "reviews":2187},
+    "offers": [
+                 "Bank OfferGet ₹50 Instant Discount on first Flipkart UPI transaction on order of ₹200 and aboveT&C",
+                 "Bank Offer5% Cashback on Flipkart Axis Bank CardT&C",
+                 "Bank Offer₹1000 off on Selected Bank Net Banking TransactionT&C",
+                 "Special PriceGet extra ₹12901 off (price inclusive of cashback/coupon)T&C"
+             ],
+     "image": "../../public/images/apple.jpg"
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Demo</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script>
+        function bodyload(){
+            fetch("../../Data/product.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(product){
+                document.getElementById("imgProduct").src = product.image;
+                document.getElementById("lblTitle").innerHTML= `<b>${product.title}</b>`;
+                document.getElementById("lblRating").innerHTML = `${product.rating.rate}`;
+                document.getElementById("lblPrice").innerHTML =    `<b> &#8377; ${product.price.toLocaleString()}</b>`;
+                document.getElementById("lblReviews").innerHTML = `&nbsp;${product.rating.ratings.toLocaleString()} Ratings &nbsp; ${product.rating.reviews.toLocaleString() }&nbsp; Reviews `;
+                
+                product.offers.map(function(offer){
+                     var li = document.createElement("li");
+                     li.className = "bi bi-tag-fill text-success my-2";
+                     li.innerHTML = `<span class = "text-black"> ${offer}</span>`;
+                     document.getElementById("lstOffers").appendChild(li);
+
+                })
+                
+            })
+        }
+    </script>
+
+  </head>
+  <body class="container-fluid" onload="bodyload()">
+    <div class="row mt-3">
+      <div class="col-3">
+        <img width="100%" id="imgProduct" /
+        >
+      </div>
+      <div class="col-9">
+        <div class="h4" id="lblTitle"></div>
+        <div class="my-3">
+          <span class="bg-success badge rounded p-2">
+            <span id="lblRating"></span>
+            <span class="bi bi-star-fill text-white"></span>
+          </span>
+          <span class="fw-bold text-secondary" id="lblReviews"></span>
+        </div>
+        <div class="my-3">
+          <div class="h3" id="lblPrice"></div>
+        </div>
+        <div class="my-3">
+          <ul class="list-unstyled" id="lstOffers"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

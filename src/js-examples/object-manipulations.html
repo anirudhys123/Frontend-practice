@@ -1,0 +1,71 @@
+<!-- <script>
+    var product = {                // Example 1 
+        title: "samsung TV",
+        id : 1,
+        price: 45000,
+        stock: true
+    }
+    for(var key in product){
+        document.write(key + "<br>");
+    }
+     
+    Object.keys(product).map(function(key){
+        document.write(`<li> ${key}</li>`);
+    })
+
+
+</script> -->
+
+<!-- 
+<script>
+     var product = {                // Example 2 
+        title: "Samsung TV",
+        id : 1,
+        price: 45000,
+        stock: true
+    }
+    for(var key in product){
+        document.write(`${key}: &nbsp; ${product[key]} <br> `);
+    }
+    document.write(Object.keys(product).length);
+
+</script> -->
+
+<!-- <script>
+    var product = {                // Example 3
+        title: "Samsung TV",
+        id : 1,
+        price: 45000,
+        rating: 4.5,
+        stock: true
+    }
+
+    if("rating" in product){
+        document.write(`Rating: ${product.rating}`);
+    }
+    else{
+        document.write("Rating not available");
+    }
+
+</script> -->
+
+<script>                             // Example 4 
+    var id = Symbol();
+    var product= {
+        [id] : 1,
+        price : 45000,
+        stock: true,
+        title : "Samsung"
+
+    }
+    Object.keys(product).map(function(key){
+        document.write(`<li> ${key}</li>`);
+    })
+    document.write(`product Id: ${product[id]}`);
+</script>
+
+
+
+
+
+

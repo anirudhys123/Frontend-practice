@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic content through array</title>
+    <script>
+      function bodyLoad(){
+        var menu = ["Home", "About", "Blog", "Shop","contact"];
+        menu.map(function(item){
+            var li = document.createElement("li");
+            li.innerHTML = item;
+            document.querySelector("ol").appendChild(li);
+            
+            var button = document.createElement("button");
+            button.innerHTML=item;
+            document.querySelector("nav").appendChild(button);
+
+            var option = document.createElement("option");
+            option.innerHTML=item;
+            document.querySelector("select").appendChild(option);
+            
+            var ul_li = document.createElement("li");
+            ul_li.innerHTML=` <input type = "checkbox"> <label>${item}</label>`;
+            document.querySelector("ul").appendChild(ul_li);
+
+        });
+      }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <ol>
+    </ol>
+    <nav style="display: flex;justify-content: space-between;width: 50%;">
+
+    </nav>
+    <br> <br>
+    <select>
+
+    </select>
+    <br> <br> 
+    <ul>
+
+    </ul>
+</body>
+</html>

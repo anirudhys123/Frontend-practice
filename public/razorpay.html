@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Razorpay Integration</title>
+    <!-- Include the Razorpay JavaScript library -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <h1>Razorpay Payment Integration</h1>
+    
+    <!-- Button to initiate payment -->
+    <button id="rzp-button">Pay with Razorpay</button>
+
+    <script>
+        // Initialize Razorpay button
+        var options = {
+            key: 'rzp_test_k3e3fimeByvpbP', // Enter your Razorpay Key ID here
+            amount: 10000, // Example: 1000 paise = ₹10
+            currency: 'INR',
+            name: 'Anirudh Tech.pvt.Ltd',
+            description: 'Test Payment',
+            handler: function(response) {
+                alert('Payment successful: ' + response.razorpay_payment_id);
+                // You can redirect or do something else here
+            }
+        };
+
+        var rzp = new Razorpay(options);
+
+        document.getElementById('rzp-button').onclick = function(e) {
+            rzp.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>

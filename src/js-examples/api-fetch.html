@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(function(response){
+           return response.json();
+        })
+        .then(function(data){
+            var ul = document.getElementById('list');
+           
+            data.map(function(item){
+                var li = document.createElement('li');
+                li.innerHTML = item.title;
+                ul.appendChild(li);
+                
+            });
+        })
+        
+    </script>
+</head>
+<body>
+    <div>
+        <ul id="list"></ul>
+       
+    </div>
+</body>
+</html>

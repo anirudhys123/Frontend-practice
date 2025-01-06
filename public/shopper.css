@@ -1,0 +1,241 @@
+.brand-title{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+   }
+   header{
+       padding: 5px;
+       display: flex;
+       justify-content: space-between;
+   }
+   header span{
+       margin-right: 15px;
+   }
+   article {
+       background-color: black;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       text-align: center;
+       color: white;
+   }
+   .bi-lightning-fill{
+       color: yellow;
+   }
+   section {
+           margin-top: 20px;
+       }
+       main {
+           height: 750px;
+           display: grid;
+           grid-template-columns: 4fr 4fr 4fr;
+           padding-bottom: 50px;
+       }
+       .women-fashion {
+           background-image: url(images/women.jpeg);
+           background-size: cover;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
+           opacity: 0.7;
+       }
+       .women-fashion:hover {
+           opacity: 1;
+       }
+       .men-fashion {
+           background-image: url(images/men.jpg);
+           background-size: cover;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
+           opacity: 0.7;
+       }
+       .men-fashion:hover {
+           opacity: 1;
+       }
+       .kid-fashion {
+           background-image: url(images/kid.jpg);
+           background-size: cover;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
+           opacity: 0.7;
+       }
+       .kid-fashion:hover {
+           opacity: 1;
+       }
+       .main-title {
+           font-size: 40px;
+           color:white;
+           font-family: Arial;
+           font-weight: bold;
+           padding-top: 20px;
+           text-shadow: 5px 5px 2px black;
+       }
+       
+       .btn-shop {
+           background-color: white;
+           color:black;
+           padding: 10px;
+           width: 120px;
+           font-size: 18px;
+           font-family: Arial;
+           text-align: center;
+       }
+   footer{
+       background-color: black;
+       color: white;
+       padding-bottom: 50px;
+       
+   }
+   .footer-title{
+       text-align: center;
+       font-weight: bold; 
+       margin-top: 10px; 
+       font-size: larger;
+
+   }
+   .subscribe {
+       text-align: center;
+       margin-top: 50px;
+   }
+   .email{
+       margin-right: 50px;
+       font-size: 20px;
+   }
+   .btn-subscribe{
+       font-size: 20px;
+       background-color: gray;
+       padding: 20px;
+   }
+   .services{
+       padding: 50px;
+       display: grid;
+       grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+   }
+   .footer-brand-title{
+       font-size: 40px;
+       font-weight: bold;
+       font-family: Arial, Helvetica, sans-serif;
+   }
+   aside{
+       margin-top: 15px;
+   }
+   aside span{
+       margin-right: 5px;
+   }
+   .service-title {
+           font-weight: bold;
+           font-size: 18px;
+           padding-bottom: 20px;
+       }
+   .service-title~span {
+           display: block;
+           padding-top: 10px;
+           padding-bottom: 10px;
+       }
+       .card-title{
+           margin-left: 7px;
+           font-weight: bold;
+           font-family: Arial, Helvetica, sans-serif;
+       }
+       p{
+           margin-left: 19px;
+       }
+       .cards {
+        display: flex;
+        justify-content: space-between; /* Ensures equal spacing between the cards */
+        align-items: center; /* Aligns the cards vertically center */
+        margin: 20px auto; /* Adjust the margin as needed */
+        max-width: 1200px; 
+        padding: 20px; 
+    }
+    
+    .card {
+        background-color: #f8f8f8; /* Example background color */
+        border: 1px solid #ddd; /* Example border */
+        padding-top: -40px; /* Adjust padding based on your design needs */
+        flex: 1; 
+        margin: 0 5px; 
+        text-align: center; 
+    }
+    
+    .card span.bi {
+        display: block; /* Make the icon a block element */
+        font-size: 15px; /* Adjust size of the icon */
+        margin-bottom: 10px; 
+    }
+    
+    .card span.card-title {
+        display: block;
+        font-size: 10x; /* Adjust size of the title */
+        font-weight: bold; /* Make title bold */
+        margin-bottom: 5px; /* Spacing between title and description */
+    }
+    .title{
+        text-align: center;
+        color: gray;
+    }
+    .sub-title{
+        text-align: center;
+        font-weight:bold;
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .text{
+        text-align: center;
+        margin-top: 1px;
+        color: gray;
+        font-size: 15px;
+    }
+    .row-1{
+       display: grid;
+       grid-template-columns: 4fr 8fr;
+       grid-gap: 20px;
+    }
+    .row-2{
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        grid-gap: 20px;
+     }
+     .sell-head{
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        margin-top: 30px;
+     }
+    .sell-subhead{
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 20px;
+    }
+    .sell-subhead span{
+        margin: 10px;
+    }
+    .seller-cards{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-gap: 10px;  
+    }
+    .card-head img{
+        width: 280px;
+    }
+    .card-1,.card-5{
+        margin-left: 30px;
+    }
+    .card-4,.card-8{
+        margin-right: 30px;
+    }
+    .card-type,.card-price{
+        color:gray;
+    }
+    .card-name{
+        font-weight: bold;  
+    }
+    
+       
+       

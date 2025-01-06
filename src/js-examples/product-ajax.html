@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <script>
+    function bodyload(){
+
+    var product = {};
+    var http = new XMLHttpRequest();
+    http.open("get","../../Data/product.json",true);
+    http.send();
+     
+    http.onreadystatechange = function(){
+        if(http.readyState==4){
+           product =  JSON.parse(http.responseText);
+          document.getElementById("lblTitle").innerHTML = `<b>${product.title}</b>`;
+          document.getElementById("lblRating").innerHTML = product.rating.rate;
+          document.getElementById("lblPrice").innerHTML = `<b> ${product.price.toLocaleString('en-in',{style:"currency",currency:'INR'})}</b>`;
+          document.getElementById("imgProduct").src = product.image;
+          document.getElementById("lblReviews").innerHTML = `<b>${product.rating.ratings.toLocaleString()} Ratings ${product.rating.reviews.toLocaleString()}Reviews</b>`;
+           console.log(product.image);
+          product.offers.map(function(offer){
+
+            var li = document.createElement("li");
+            li.className = "bi bi-tag-fill text-success my-2";
+            li.innerHTML = `<span class = "text-black"> ${offer}</span>`;
+            document.querySelector("ul").appendChild(li);
+          })
+
+        }
+    }
+}
+
+  </script>
+
+  <body class="container-fluid" onload="bodyload()">
+    <div class="mt-3 row">
+      <div class="col-3">
+        <img id="imgProduct" width="100%">
+      </div>
+      <div class="col-9">
+        <div class="h5" id="lblTitle"></div>
+        <div class="my-3">
+          <span class="bg-success p-1 rounded text-white">
+            <span id="lblRating"></span> <span class="bi bi-star-fill"></span>
+          </span>
+          <span id="lblReviews" class="text-secondary ms-3"></span>
+        </div>
+        <div class = "mt-4">
+            <div class = "h5" id = "lblPrice"></div>
+        </div>
+        <div class="my-3">
+            <ul class = "list-unstyled">
+
+            </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

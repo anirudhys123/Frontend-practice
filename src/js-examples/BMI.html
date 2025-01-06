@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       .input-value{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       dt{
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 25px;
+       }
+       dd{
+        margin-left: -10px;
+       }
+       dd input{
+        height: 30px;
+        font-size: 25px;
+       }
+       .calc{
+        padding: 10px;
+        font-size: 20px;
+       }
+       .bmi-result {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 25px;
+       }
+    </style>
+    <script>
+        function Calculate() {
+            var a = document.getElementById("age").value;
+            var h = document.getElementById("height").value;
+            var w = document.getElementById("weight").value;
+            var bmi = (w / (Math.pow(h, 2))) * 10000;
+            document.getElementById("result").innerHTML = "Your " + bmi.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center">BMI calculator</h1>
+    <div class="input-value">
+        <dl>
+            <dt>Enter age</dt>
+            <dd><input type="text" id="age" placeholder="Enter the age"></dd>
+        </dl>
+    </div>
+
+    <div class="input-value">
+        <dl>
+            <dt>Enter The Height(cm)</dt>
+            <dd><input type="text" id="height" placeholder="Enter the Height"></dd>
+        </dl>
+    </div>
+
+    <div class="input-value">
+        <dl>
+            <dt>Enter Weight (Kg)</dt>
+            <dd><input type="text" id="weight" placeholder="Enter the Weight"></dd>
+        </dl>
+    </div>
+
+    <div class="input-value">
+        <button class="calc" onclick="Calculate()">Calculate</button>
+    </div>
+
+    <div class="bmi-result">
+        <p id="result" ></p>
+    </div>
+</body>
+</html>

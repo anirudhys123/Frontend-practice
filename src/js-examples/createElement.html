@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>                     // Example 1
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function LoadImage(){
+        var pic = document.createElement("img");
+        pic.height=100;
+        pic.width = 100;
+        pic.src = "../../public/images/apple.jpg";
+        document.getElementById("container").appendChild(pic);
+    }
+
+</script>
+<body>
+
+    <button onclick="LoadImage()"> Load image</button>
+    <br> <br>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>                             // Example 2
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function LoadClick(){
+        var ol = document.createElement("ol");
+        ol.type="a";
+
+        var item1 = document.createElement("li");
+        var item2 = document.createElement("li");
+
+        item1.innerHTML= "Home";
+        item2.innerHTML="About";
+        ol.appendChild(item1);
+        ol.appendChild(item2);
+
+        document.getElementById("container").appendChild(ol);
+    }
+
+</script>
+<body>
+    <button onclick="LoadClick()"> Load List</button>
+    <div id = "container">
+
+    </div>
+</body>
+</html> -->
+
+
+

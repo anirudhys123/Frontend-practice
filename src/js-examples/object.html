@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <script>
+    var mobile = {
+        "title": "Iphone - Black(16gb RAM, 128gb Storage)",
+        "price": 65999,
+        "rating": {"rate":4.6, "ratings":39755, "reviews":2187},
+        "offers": [
+        "Bank OfferGet ₹50 Instant Discount on first Flipkart UPI transaction on order of ₹200 and aboveT&C",
+        "Bank Offer5% Cashback on Flipkart Axis Bank CardT&C",
+        "Bank Offer₹1000 off on Selected Bank Net Banking TransactionT&C",
+        "Special PriceGet extra ₹12901 off (price inclusive of cashback/coupon)T&C"
+        ],
+        "image": "../../public/images/apple.jpg"
+    }
+
+    function bodyload(){
+        document.getElementById("imgProduct").src = mobile.image;
+        document.getElementById("lblTitle").innerHTML = `<b>${mobile.title}</b>`;
+        document.getElementById("lblRating").innerHTML = mobile.rating.rate;
+        document.getElementById("lblReviews").innerHTML = `<b> ${mobile.rating.ratings.toLocaleString()}&nbsp;Ratings &nbsp; ${mobile.rating.reviews.toLocaleString()}&nbsp; Reviews</b>`;
+        document.getElementById("lblPrice").innerHTML = `<b>${mobile.price.toLocaleString('en-in',{style:"currency",currency:'INR'})}</b>`;
+   
+       mobile.offers.map(function(offer){
+        var li = document.createElement("li");
+        li.className="text-success bi bi-tag-fill my-2";
+        li.innerHTML= `<span class = "text-secondary fs-5">${offer}</span>`;
+        document.querySelector("ul").appendChild(li);
+       });
+   
+   
+    }
+  </script>
+  <body class="container-fluid" onload="bodyload()">
+    <div class="mt-3 row">
+      <div class="col-3">
+        <img id="imgProduct" width="100%">
+      </div>
+      <div class="col-9">
+        <div class="h5" id="lblTitle"></div>
+        <div class="my-3">
+          <span class="bg-success p-1 rounded text-white">
+            <span id="lblRating"></span> <span class="bi bi-star-fill"></span>
+          </span>
+          <span id="lblReviews" class="text-secondary ms-3"></span>
+        </div>
+        <div class = "mt-4">
+            <div class = "h5" id = "lblPrice"></div>
+        </div>
+        <div class="my-3">
+            <ul class = "list-unstyled">
+
+            </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function bodyload(){
+           document.querySelector("img").src = "../../public/images/a1.jpg";
+           document.querySelector("#btnLogin").value = "Login";
+           document.querySelector(".btn-primary").value = "Register";
+        }
+    </script>
+</head>
+<body">
+    <div><img width="200"  height="200" border="1"></div>
+    <div>
+        <form name="frmLogin">
+            <h2>User Login</h2>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Password</dt>
+                <dd><input type="password"></dd>
+            </dl>
+            <input id="btnLogin" type="button">
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h2>Register User</h2>
+            <dl>
+                <dt>Email</dt>
+                <dd><input type="email"></dd>
+                <dt>Mobile</dt>
+                <dd><input type="text"></dd>
+            </dl>
+            <input type="button" class="btn-primary">
+        </form>
+    </div>
+    <button onclick="bodyload()">Show</button>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript">
+        function deleteClick(){
+           res = confirm("should record be deleted");
+           if(res ==true){
+            alert("record deleted successfully");
+           }
+           else{
+            alert("cancelled");
+           }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+    <button onclick="deleteClick()"> Delete</button>
+</body>
+</html> -->

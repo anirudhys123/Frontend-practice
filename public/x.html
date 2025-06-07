@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('../public/images/netflix.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+        }
+
+        .shade {
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            color: white;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-title {
+            font-size: 40px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .lang {
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: lightgray;
+            color: black;
+            margin-right: 20px;
+        }
+
+        .btn-signin {
+            background-color: red;
+            padding: 5px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        section, main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 80px;
+            max-width: 90%;
+        }
+
+        .sub-title {
+            font-size: 30px;
+            margin-top: 20px;
+            max-width: 80%;
+        }
+
+        main {
+            padding-top: 40px;
+            font-size: 20px;
+        }
+
+        .main-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            max-width: 90%;
+        }
+
+        .main-controls {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .email {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 16px;
+        }
+
+        .btn-start {
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="shade">
+        <header>
+            <div>
+                <span class="brand-title"> NETFLIX</span>
+            </div>
+            <div>
+                <span class="lang">
+                    <span class="bi bi-translate"></span>
+                    <span> English</span>
+                    <span class="bi bi-chevron-down"></span>
+                </span>
+                <span class="btn-signin">
+                    Sign In
+                </span>
+            </div>
+        </header>
+
+        <section>
+            <div class="title"> Unlimited movies , TV shows and more</div>
+            <div class="sub-title">Watch anywhere . Cancel anytime</div>
+        </section>
+        <main>
+            <div class="main-title">Ready to work? Enter the email to create or restart membership.</div>
+            <div class="main-controls">
+                <input type="email" class="email" placeholder="Your email address" />
+                <span class="btn-start">
+                    <span> Get Started</span>
+                    <span class="bi bi-chevron-right"></span>
+                </span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
